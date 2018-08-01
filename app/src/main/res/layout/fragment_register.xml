@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RegisterFragment"
+    >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"></View>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/image_yara"
+        />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/edit_text_name"
+            android:id="@+id/edit_text_name"
+            android:textSize="24dp"
+            android:layout_margin="20dp"
+            android:padding="10dp"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edit_Text_Family"
+            android:hint="@string/edit_text_family"
+            android:layout_margin="10dp"
+            android:textSize="24dp"
+            android:padding="10dp"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edit_Text_Email"
+            android:hint="@string/edit_text_imail"
+            android:layout_margin="10dp"
+            android:textSize="24dp"
+            android:padding="10dp"
+            />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linear"
+        android:layout_margin="10dp"
+        >
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_sign"
+            android:layout_weight="1"
+            android:text="@string/button_vorod"
+            android:textSize="24dp"
+            android:layout_margin="16dp"
+            style="?android:listSeparatorTextViewStyle"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_cancle"
+            android:layout_weight="1"
+            android:text="@string/button_cancle"
+            android:textSize="24dp"
+            android:layout_margin="16dp"
+            style="?android:listSeparatorTextViewStyle"
+            />
+    </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
