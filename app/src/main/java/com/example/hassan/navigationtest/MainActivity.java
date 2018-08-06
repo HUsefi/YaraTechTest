@@ -21,6 +21,7 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 import com.example.hassan.navigationtest.form.FormActivity;
+import com.example.hassan.navigationtest.retrofit.RetrofitActivity;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -113,10 +114,12 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_profile) {
-            Intent intent= new Intent(MainActivity.this, FormActivity.class);
+            Intent intent = new Intent(MainActivity.this, FormActivity.class);
             startActivity(intent);
-            // Handle the camera action
-        } else if (id == R.id.nav_about_us) {
+        } else if (id==R.id.nav_retrofit) {
+            Intent intent = new Intent(MainActivity.this, RetrofitActivity.class);
+            startActivity(intent);
+         }else if (id == R.id.nav_about_us) {
             Fragment aboutfragment = new AboutFragment();
             setFragment(aboutfragment);
 

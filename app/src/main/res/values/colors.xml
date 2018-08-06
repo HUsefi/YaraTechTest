@@ -5,4 +5,6 @@
     <color name="colorAccent">#FF4081</color>
     <color name="color_text_user_name">#000000</color>
     <color name="color_nav_header">#FFF</color>
+    <color name="bacground_color">#a7ddfc</color>
+    <color name="color_text_user">#6cc3de</color>
 </resources>

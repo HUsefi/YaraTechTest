@@ -26,4 +26,6 @@
     <string name="text_myemail">Hyousefi412@gmail.com</string>
     <string name="link_github">https://github.com/HUsefi</string>
     <string name="text_about_me">Hello Dear ...Here is about me</string>
+    <string name="text_view_retrofit">رتروفیت</string>
+    <string name="text_retrofit">رتروفیت</string>
 </resources>
