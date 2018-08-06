@@ -9,7 +9,7 @@ import android.widget.Toast;
 import com.example.hassan.navigationtest.CategoryFragment;
 import com.example.hassan.navigationtest.R;
 
-public class FormActivity extends AppCompatActivity implements NameFragment.name,FamilyFragment.family,SubmitFragment.submit{
+public class FormActivity extends AppCompatActivity implements NameFragment.firstInput,FamilyFragment.secondInput,SubmitFragment.submit{
 
     public String name,family;
 

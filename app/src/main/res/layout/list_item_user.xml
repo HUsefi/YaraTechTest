@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/list_item_user"
+    android:orientation="vertical"
+    >
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/text_view_list_item_user"
+    android:layout_gravity="center"
+    android:text="User"
+    android:textSize="24dp"
+    android:layout_margin="30dp"
+    />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_view_list_item_pass"
+        android:layout_gravity="center"
+        android:text="Password"
+        android:textSize="24dp"
+        android:layout_margin="30dp"
+        />
+
+
+</LinearLayout>

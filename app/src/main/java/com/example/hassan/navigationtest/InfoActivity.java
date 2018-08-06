@@ -25,8 +25,5 @@ public class InfoActivity extends AppCompatActivity {
          textView.append(person.getmFamily()+"\n");
          textView.append(person.getmEmail());
 
-
-
-
     }
 }

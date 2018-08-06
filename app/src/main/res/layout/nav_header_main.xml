@@ -31,9 +31,9 @@
         android:textColor="@color/color_text_user_name" />
 
     <View
-        android:layout_width="1dp"
+        android:layout_width="match_parent"
         android:layout_gravity="bottom"
-        android:layout_height="match_parent">
+        android:layout_height="2dp">
     </View>
 
 </LinearLayout>

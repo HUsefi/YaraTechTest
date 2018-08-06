@@ -45,21 +45,15 @@ public class MainActivity extends AppCompatActivity
                                 Menu menu1 = bottomNavigationView.getMenu();
                                 MenuItem menuItem1 = menu1.getItem(1);
                                 menuItem1.setChecked(true);
-                                FragmentManager fragmentManager= getSupportFragmentManager();
                                 Fragment categoryfragment = new CategoryFragment();
-                                fragmentManager.beginTransaction()
-                                        .replace(R.id.drawer_layout,categoryfragment)
-                                        .commit();
+                                setFragment(categoryfragment);
                                 break;
                             case R.id.navigation_menu:
                                 Menu menu2 = bottomNavigationView.getMenu();
                                 MenuItem menuItem2 = menu2.getItem(0);
                                 menuItem2.setChecked(true);
-                                FragmentManager fragmentManager1= getSupportFragmentManager();
                                 Fragment registerfragment = new RegisterFragment();
-                                fragmentManager1.beginTransaction()
-                                        .replace(R.id.drawer_layout,registerfragment)
-                                        .commit();
+                                setFragment(registerfragment);
                                 break;
                         }
                         return false;
@@ -123,13 +117,25 @@ public class MainActivity extends AppCompatActivity
             startActivity(intent);
             // Handle the camera action
         } else if (id == R.id.nav_about_us) {
+            Fragment aboutfragment = new AboutFragment();
+            setFragment(aboutfragment);
 
         } else if (id == R.id.nav_contact_us) {
-
+            Fragment contactfragment = new ContactFragment();
+            setFragment(contactfragment);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+
+    void  setFragment(Fragment fragment){
+        FragmentManager fragmentManager=getSupportFragmentManager();
+        fragmentManager.beginTransaction()
+                .replace(R.id.drawer_layout,fragment)
+                .addToBackStack(null)
+                .commit();
     }
 }

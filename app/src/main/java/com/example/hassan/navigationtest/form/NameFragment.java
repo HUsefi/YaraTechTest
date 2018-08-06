@@ -12,9 +12,7 @@ import android.widget.EditText;
 
 import com.example.hassan.navigationtest.R;
 
-/**
- * A simple {@link Fragment} subclass.
- */
+
 public class NameFragment extends Fragment {
 
     private  EditText mEditTestFamily;
@@ -37,7 +35,7 @@ public class NameFragment extends Fragment {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                ((name)getContext()).setName(charSequence.toString());
+                ((firstInput)getContext()).setName(charSequence.toString());
             }
 
             @Override
@@ -47,7 +45,7 @@ public class NameFragment extends Fragment {
         });
         return view;
     }
-    public interface name{
+    public interface firstInput{
          void setName(String name);
     }
 }

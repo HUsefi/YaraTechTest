@@ -12,9 +12,6 @@ import android.widget.Button;
 
 import com.example.hassan.navigationtest.R;
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class SubmitFragment extends Fragment {
 
     private  Button mButtonSubmit;

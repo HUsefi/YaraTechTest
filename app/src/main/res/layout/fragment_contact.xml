@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ContactFragment">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+</View>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:textSize="24dp"
+        android:text="@string/text_myemail"
+        android:id="@+id/text_view_email"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:textSize="24dp"
+        android:text="@string/link_github"
+        android:id="@+id/text_view_link_git"
+        />
+
+</LinearLayout>

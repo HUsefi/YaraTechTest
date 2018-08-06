@@ -12,9 +12,6 @@ import android.widget.EditText;
 
 import com.example.hassan.navigationtest.R;
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class FamilyFragment extends Fragment {
 
     private EditText mEditTestFamily;
@@ -37,7 +34,7 @@ public class FamilyFragment extends Fragment {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                ((FamilyFragment.family)getContext()).setFamily(charSequence.toString());
+                ((FamilyFragment.secondInput)getContext()).setFamily(charSequence.toString());
             }
 
             @Override
@@ -47,7 +44,7 @@ public class FamilyFragment extends Fragment {
         });
         return view;
     }
-    public interface family{
+    public interface secondInput{
         void setFamily(String family);
     }
 
