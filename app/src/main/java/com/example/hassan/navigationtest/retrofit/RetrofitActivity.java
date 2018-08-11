@@ -5,6 +5,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import com.example.hassan.navigationtest.R;
+import com.example.hassan.navigationtest.retrofit.ui.post.ListPostUserFragment;
+import com.example.hassan.navigationtest.retrofit.ui.user.ListUsersFragment;
 
 public class RetrofitActivity extends AppCompatActivity implements ListUsersFragment.OnClick {
 

@@ -1,4 +1,4 @@
-package com.example.hassan.navigationtest.retrofit.model;
+package com.example.hassan.navigationtest.retrofit.data.model;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

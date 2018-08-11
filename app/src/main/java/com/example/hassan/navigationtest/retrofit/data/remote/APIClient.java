@@ -1,4 +1,4 @@
-package com.example.hassan.navigationtest.retrofit;
+package com.example.hassan.navigationtest.retrofit.data.remote;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

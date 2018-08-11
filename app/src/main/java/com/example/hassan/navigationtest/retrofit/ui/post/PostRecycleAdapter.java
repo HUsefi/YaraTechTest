@@ -1,4 +1,4 @@
-package com.example.hassan.navigationtest.retrofit;
+package com.example.hassan.navigationtest.retrofit.ui.post;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -9,12 +9,12 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.hassan.navigationtest.R;
-import com.example.hassan.navigationtest.retrofit.model.Post;
+import com.example.hassan.navigationtest.retrofit.data.model.Post;
 
 
 import java.util.List;
 
-public class PostRecycleAdapter extends  RecyclerView.Adapter <PostRecycleAdapter.UserHolder> {
+public class PostRecycleAdapter extends RecyclerView.Adapter<PostRecycleAdapter.UserHolder> {
 
     private LayoutInflater layoutInflater;
     private Context context;
@@ -30,7 +30,7 @@ public class PostRecycleAdapter extends  RecyclerView.Adapter <PostRecycleAdapte
     @Override
     public PostRecycleAdapter.UserHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        View view = layoutInflater.inflate(R.layout.post_item_row,parent,false);
+        View view = layoutInflater.inflate(R.layout.post_item_row, parent, false);
         return new PostRecycleAdapter.UserHolder(view);
     }
 
@@ -42,20 +42,25 @@ public class PostRecycleAdapter extends  RecyclerView.Adapter <PostRecycleAdapte
 
     }
 
-    public class UserHolder extends RecyclerView.ViewHolder {
-        private TextView postTextView;
-        public UserHolder(View itemView) {
-            super(itemView);
-            postTextView =(TextView) itemView.findViewById(R.id.text_view_post);
-        }
-    }
-
-
-
-
     @Override
     public int getItemCount() {
         return posts.size();
+    }
+
+
+    public void setDate(List<Post> posts) {
+        this.posts = posts;
+        notifyDataSetChanged();
+    }
+
+
+    public class UserHolder extends RecyclerView.ViewHolder {
+        private TextView postTextView;
+
+        public UserHolder(View itemView) {
+            super(itemView);
+            postTextView = (TextView) itemView.findViewById(R.id.text_view_post);
+        }
     }
 
 }

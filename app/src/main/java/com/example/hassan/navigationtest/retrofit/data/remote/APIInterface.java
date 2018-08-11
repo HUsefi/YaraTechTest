@@ -1,7 +1,7 @@
-package com.example.hassan.navigationtest.retrofit;
+package com.example.hassan.navigationtest.retrofit.data.remote;
 
-import com.example.hassan.navigationtest.retrofit.model.Post;
-import com.example.hassan.navigationtest.retrofit.model.User;
+import com.example.hassan.navigationtest.retrofit.data.model.Post;
+import com.example.hassan.navigationtest.retrofit.data.model.User;
 
 import java.util.List;
 
