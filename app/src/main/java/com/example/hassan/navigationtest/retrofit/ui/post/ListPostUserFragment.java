@@ -35,15 +35,14 @@ import retrofit2.Response;
 
 public class ListPostUserFragment extends Fragment implements PostConstractor.View{
 
-    private ProgressBar progressBar;
+    private ProgressBar mprogressBar;
     private PostConstractor.Presenter mPostPresenter;
     private RecyclerView recyclerView;
     private PostRecycleAdapter postRecycleAdapter;
     private List<Post> posts = new ArrayList<>();
-    private int userId;
+
 
     public ListPostUserFragment() {
-        // Required empty public constructor
     }
 
     public static ListPostUserFragment newInstance(int id) {
@@ -63,8 +62,6 @@ public class ListPostUserFragment extends Fragment implements PostConstractor.Vi
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_list_post_user, container, false);
 
-    //    userRequest();
-    //    return view;
     }
 
     @Override
@@ -74,7 +71,7 @@ public class ListPostUserFragment extends Fragment implements PostConstractor.Vi
         recyclerView = (RecyclerView) view.findViewById(R.id.list_post_user);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
-        progressBar = (ProgressBar) view.findViewById(R.id.progress_bar);
+        mprogressBar = (ProgressBar) view.findViewById(R.id.progress_bar_post);
     }
 
     @Override
@@ -83,45 +80,18 @@ public class ListPostUserFragment extends Fragment implements PostConstractor.Vi
         postRecycleAdapter = new PostRecycleAdapter(getContext(),posts);
         recyclerView.setAdapter(postRecycleAdapter);
         mPostPresenter = new PostPresenter(this);
-        mPostPresenter.fetchPostDataFromRemote(userId);
+        mPostPresenter.fetchPostDataFromRemote(getArguments().getInt("UserId"));
 
     }
 
-    //    private void userRequest() {
-//        APIClient apiClient = new APIClient();
-//        APIInterface service = apiClient.getClient().create(APIInterface.class);
-//        Call<List<Post>> postsList = service.getPosts(userId);
-//
-//        postsList.enqueue(new Callback<List<Post>>() {
-//            @Override
-//            public void onResponse(Call<List<Post>> call, Response<List<Post>> response) {
-//                if (response.isSuccessful()) {
-//                    List<Post> listPost = response.body();
-//                    PostRecycleAdapter postRecycleAdapter = new PostRecycleAdapter(getContext(), listPost);
-//                    recyclerView.setAdapter(postRecycleAdapter);
-//                }
-//            }
-//
-//            @Override
-//            public void onFailure(Call<List<Post>> call, Throwable t) {
-//                if (t instanceof IOException) {
-//                    Toast.makeText(getContext(), "Connection problem!!!", Toast.LENGTH_SHORT).show();
-//                }
-//            }
-//        });
-//
-//
-//    }
-
-
     @Override
     public void showProgress() {
-        progressBar.setVisibility(View.VISIBLE);
+        mprogressBar.setVisibility(View.VISIBLE);
     }
 
     @Override
     public void hideProgress() {
-        progressBar.setVisibility(View.GONE);
+        mprogressBar.setVisibility(View.GONE);
     }
 
     @Override

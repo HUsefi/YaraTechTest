@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import com.example.hassan.navigationtest.R;
 import com.example.hassan.navigationtest.retrofit.data.model.User;
+import com.example.hassan.navigationtest.retrofit.ui.post.PostConstractor;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,8 +45,6 @@ public class ListUsersFragment extends Fragment implements UserConstractor.view
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_list_user, container, false);
 
-        //    userRequest();
-//        return view;
     }
 
     @Override
@@ -85,35 +84,9 @@ public class ListUsersFragment extends Fragment implements UserConstractor.view
 
     @Override
     public void onGetDate(List<User> usersList) {
+        users=usersList;
         userRecycleAdapter.setDate(usersList);
     }
-
-
-//    private void userRequest() {
-//        APIClient apiClient=new APIClient();
-//        APIInterface service = apiClient.getClient().create(APIInterface.class);
-//        Call<List<User>> usersList = service.getUsers();
-//        usersList.enqueue(new Callback<List<User>>() {
-//            @Override
-//            public void onResponse(Call<List<User>> call, Response<List<User>> response) {
-//                if(response.isSuccessful()){
-//                     users =response.body();
-//                    userRecycleAdapter = new UserRecycleAdapter(getContext(), users,
-//                            ListUsersFragment.this);
-//                    recyclerView.setAdapter(userRecycleAdapter);
-//                }
-//
-//            }
-//
-//            @Override
-//            public void onFailure(Call<List<User>> call, Throwable t) {
-//                if(t instanceof IOException){
-//                    Toast.makeText(getContext(), "Connection problem!!!", Toast.LENGTH_SHORT).show();
-//                }
-//            }
-//        });
-//
-//    }
 
 
     @Override
