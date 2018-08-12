@@ -14,7 +14,7 @@ public class PostPresenter implements PostConstractor.Presenter {
 
     public PostPresenter(PostConstractor.View view) {
         this.view = view;
-        this.mRepository = mRepository;
+        mRepository=new Repository();
     }
 
     @Override
@@ -24,7 +24,7 @@ public class PostPresenter implements PostConstractor.Presenter {
         mRepository.getPostsList(new APIResult<List<Post>>() {
             @Override
             public void onSuccess(List<Post> result) {
-                view.hideProgress();
+               // view.hideProgress();
                 view.onGetPostDate(result);
 
             }
